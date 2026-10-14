@@ -1,0 +1,3 @@
+# Hemmeligheter og runtime (norm «kontoer»): aldri i git
+.env
+.env.*
