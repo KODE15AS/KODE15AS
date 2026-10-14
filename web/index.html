@@ -9,6 +9,37 @@
 <link rel="stylesheet" href="kode15.css">
 <style>
   /* Sidespesifikt — kun k15-tokens (norm «web-profil»). */
+  body { margin: 0; }
+
+  /* Topplinje à la popina.no: høyere hvit seksjon, større logo, meny. */
+  .k-topp { display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; padding: 22px 32px; }
+  .k-topp .k15-logo { height: 58px; }
+  .k-meny { display: flex; align-items: center; gap: 30px;
+    font-family: var(--k15-font-heading); font-size: 13px; font-weight: 500;
+    letter-spacing: .12em; text-transform: uppercase; }
+  .k-meny > a { color: var(--k15-blaagraa-mork); text-decoration: none; }
+  .k-meny > a:hover { color: var(--k15-skifer); }
+  .k-meny-drengr { position: relative; }
+  .k-meny-drengr summary { list-style: none; cursor: pointer;
+    color: var(--k15-blaagraa-mork); user-select: none; }
+  .k-meny-drengr summary::-webkit-details-marker { display: none; }
+  .k-meny-drengr summary::after { content: " ▾"; font-size: 10px; }
+  .k-meny-drengr[open] summary, .k-meny-drengr summary:hover {
+    color: var(--k15-skifer); }
+  .k-meny-drengr ul { position: absolute; right: 0; top: calc(100% + 14px);
+    margin: 0; padding: 8px 0; list-style: none; background: var(--k15-hvit);
+    border: 1px solid var(--k15-linje); border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(35, 48, 56, .12); min-width: 310px;
+    z-index: 10; }
+  .k-meny-drengr li a { display: block; padding: 10px 18px;
+    color: var(--k15-tekst); text-decoration: none; text-transform: none;
+    letter-spacing: normal; font-weight: 400; font-size: 14px;
+    font-family: inherit; }
+  .k-meny-drengr li a:hover { background: var(--k15-flate); }
+  .k-meny-drengr li a strong { color: var(--k15-blaagraa-mork);
+    font-weight: 500; }
+
   .k-main { max-width: 960px; margin: 0 auto; padding: 32px 20px 56px; }
   /* Alt tekstinnhold på samme midtakse (sentrert komposisjon på desktop). */
   .k-main .k15-kicker, .k-main h1, .k-main h2 { text-align: center; }
@@ -30,6 +61,10 @@
     height: 3px; background: var(--k15-beige); margin: 20px auto 0; }
   .k-ruter-tittel { margin-top: 56px; }
   @media (max-width: 600px) {
+    .k-topp { padding: 14px 16px; gap: 12px; }
+    .k-topp .k15-logo { height: 42px; }
+    .k-meny { gap: 16px; font-size: 12px; letter-spacing: .08em; }
+    .k-meny-drengr ul { min-width: 250px; }
     .k-main { padding: 20px 14px 40px; }
     .k-sone, .k-ruter-tittel { margin-top: 40px; }
     .k-punchline { font-size: 19px; margin: 28px auto; }
@@ -38,7 +73,25 @@
 </style>
 </head>
 <body class="k15-page">
-<header class="k15-header"><img class="k15-logo" src="kode15-logo.png" alt="KODE15"></header>
+<header class="k15-header k-topp">
+  <a href="/" aria-label="Til startsiden"><img class="k15-logo" src="kode15-logo.png" alt="KODE15"></a>
+  <nav class="k-meny" aria-label="Hovedmeny">
+    <details class="k-meny-drengr" id="drengr-meny">
+      <summary>Drengr</summary>
+      <ul>
+        <li><a href="https://web-gateway.kode15.app"><strong>web-gateway</strong> — driftsstatus for alle drengir</a></li>
+        <li><a href="https://fortigate.kode15.app"><strong>fortigate</strong> — brannmuren i lesemodus</a></li>
+      </ul>
+    </details>
+    <a href="https://kode15.no">kode15.no</a>
+  </nav>
+</header>
+<script>
+  // Lukk DRENGR-menyen ved klikk utenfor eller Escape.
+  const meny = document.getElementById('drengr-meny');
+  document.addEventListener('click', e => { if (!meny.contains(e.target)) meny.open = false; });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') meny.open = false; });
+</script>
 <main class="k-main">
 
   <!-- Sone 1: fortellingen -->
