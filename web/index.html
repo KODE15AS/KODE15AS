@@ -10,14 +10,16 @@
 <style>
   /* Sidespesifikt — kun k15-tokens (norm «web-profil»). */
   .k-main { max-width: 960px; margin: 0 auto; padding: 32px 20px 56px; }
-  .k-intro { max-width: 640px; }
+  /* Alt tekstinnhold på samme midtakse (sentrert komposisjon på desktop). */
+  .k-main .k15-kicker, .k-main h1, .k-main h2 { text-align: center; }
+  .k-intro, .k-flyt { max-width: 680px; margin: 0 auto; text-align: center; }
   .k-illustrasjon { text-align: center; margin: 36px 0; }
   .k-illustrasjon img { max-width: 360px; width: 100%; border-radius: 14px;
     border: 1px solid var(--k15-linje); }
   .k-illustrasjon figcaption { font-size: 12px; color: var(--k15-noytralgraa);
     margin-top: 10px; }
   .k-sone { margin-top: 56px; }
-  .k-flyt { color: var(--k15-tekst); max-width: 640px; }
+  .k-flyt { color: var(--k15-tekst); }
   .k-punchline { margin: 36px auto; max-width: 560px; text-align: center;
     font-family: var(--k15-font-heading);
     font-size: 24px; font-weight: 400; line-height: 1.35;
