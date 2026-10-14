@@ -14,7 +14,8 @@ drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
 
 - `README.md` — profilsiden på GitHub (ferdig førsteutgave, 2026-10-12).
 - `drengr.jpg` — DRENGR-illustrasjonen.
-- `web/` — startsiden (utkast finnes: `index.html` + webprofil).
+- `web/` — startsiden, live på https://kode15.app (dummy; endelig
+  utforming pågår).
 
 ## Status
 
@@ -44,9 +45,9 @@ drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
       drengr-katalog (nå på https://web-gateway.kode15.app) leverer
       allerede dette — startsiden lenker dit i 01-ruta; avklar med Jørn
       om den på sikt skal innlemme mer.
-- [ ] Lesemodus-lenken fortigate.kode15.app (README) forutsetter at
-      fortigate-drengen og web-gateway er i drift — avhengighet, ikke
-      denne drengens leveranse.
+- [x] Lesemodus-lenken fortigate.kode15.app (README): fortigate-drengen
+      og web-gateway er i drift, lenken er live — avhengigheten innfridd
+      2026-10-14 (andre drengers leveranse).
 
 ## Kjente forhold
 

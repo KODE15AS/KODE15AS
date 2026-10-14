@@ -36,7 +36,7 @@ Dette er ikke et konsept — det er produksjonen vår:
 
 - **[kode15.app](https://kode15.app)** — startsiden vår, servert av denne
   drengen. Derfra: **[web-gateway.kode15.app](https://web-gateway.kode15.app)**
-  — flåten live, hver drengr med status og sertifikater, generert
+  — driftsstatus, live: hver drengr med status og sertifikater, generert
   automatisk hvert 10. minutt.
 - **[fortigate.kode15.app](https://fortigate.kode15.app)** — se
   brannmurforvaltningen vår i lesemodus: åpne forslag, godkjennings-
@@ -54,5 +54,6 @@ det gjelder. Dette repoet er startsiden for den fortellingen, og
 
 ---
 
-*Startsiden i `web/` er under bygging — den blir selv en drengr i flåten
-den beskriver.*
+*Startsiden i `web/` er live på [kode15.app](https://kode15.app) — den er
+selv en drengr, bygget og driftet akkurat slik den beskriver. Endelig
+utforming pågår.*
