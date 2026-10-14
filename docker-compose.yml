@@ -1,0 +1,19 @@
+services:
+  kode15as:
+    build: .
+    image: kode15as:latest
+    container_name: kode15as
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8101:8101"   # lokal verifisering
+      - "100.65.19.39:8101:8101" # kun Tailscale
+    networks:
+      - drengr-nett # web-gateway ruter kode15as.kode15.app -> kode15as:8101
+    labels:
+      raven.project: kode15as
+
+networks:
+  # Delt nett for alle drengir web-gateway ruter til (norm «container»).
+  drengr-nett:
+    name: drengr-nett
+    external: true

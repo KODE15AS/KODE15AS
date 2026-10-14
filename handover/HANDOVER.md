@@ -23,16 +23,22 @@ drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
 - [x] Profil-README med drengr-fortellingen, 2026-10-12.
 - [x] Utkast til startside i `web/` (KODE15-webprofil), 2026-10-12.
 - [x] Handover-katalog og `.gitignore` på plass, 2026-10-14.
-- [ ] Container-scaffold (norm «container»: 1:1 repo↔container):
-      `Dockerfile` + `docker-compose.yml` som server `web/` statisk.
-      Portforslag: 8100 på 127.0.0.1 + Tailscale (8098 = deploi-dns,
-      8099 = fortigate — verifiser ledig ved oppsett).
-- [ ] URL og tilgang via `web-gateway` (eier URL-oppbygging, norm
-      «container»): startsiden skal bli https://kode15.app — koordineres
-      med web-gateway-drengen.
-- [ ] Flåtestatus på kode15.app (README lover «hver drengr med status og
-      sertifikater, generert hvert 10. minutt») — design og kilde
-      avklares; i dag er dette målbilde, ikke drift.
+- [x] Container-scaffold (norm «container»): `Dockerfile` (caddy:2-alpine,
+      file-server) + `docker-compose.yml` som server `web/` statisk på
+      port **8101** (8100 viste seg opptatt av studio15-light-caddyen);
+      bundet 127.0.0.1 + Tailscale, medlem av `drengr-nett`. 2026-10-14.
+- [x] URL via `web-gateway`: **https://kode15as.kode15.app** etter
+      drengr-URL-regelen (A-post i deploi-dns + Caddy-blokk), 2026-10-14.
+      MERK: rot-domenet kode15.app serverer i dag web-gateways
+      drengr-katalog; cutover av roten til denne startsiden avtales med
+      Jørn når designet er ferdig.
+- [ ] Startside-design: dagens side er en dummy i KODE15-profil —
+      utforming gjøres sammen med Jørn.
+- [ ] Drengr-status på startsiden (README lover «hver drengr med status
+      og sertifikater, generert hvert 10. minutt»): web-gateways
+      drengr-katalog på kode15.app leverer allerede dette — avklar om
+      startsiden lenker, innlemmer eller overtar katalogen ved
+      rot-cutover.
 - [ ] Lesemodus-lenken fortigate.kode15.app (README) forutsetter at
       fortigate-drengen og web-gateway er i drift — avhengighet, ikke
       denne drengens leveranse.
