@@ -32,8 +32,14 @@ drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
       MERK: rot-domenet kode15.app serverer i dag web-gateways
       drengr-katalog; cutover av roten til denne startsiden avtales med
       Jørn når designet er ferdig.
-- [ ] Startside-design: dagens side er en dummy i KODE15-profil —
+- [ ] Startside-design: dagens side er en presentabel dummy i
+      KODE15-profil (fortelling fra README + drengr-illustrasjon +
+      ruter til driftsstatus/fortigate/GitHub, 2026-10-14) — endelig
       utforming gjøres sammen med Jørn.
+- [ ] Rot-cutover: bestilling levert Jørn 2026-10-14 for å gi til
+      web-gateway-drengen (kode15.app-roten → kode15as:8101; katalogen
+      flytter til web-gateway.kode15.app). Etter cutover: oppdater
+      01-ruta «Driftsstatus» i `web/index.html` til katalogens nye URL.
 - [ ] Driftsstatus på startsiden (README lover «hver drengr med status
       og sertifikater, generert hvert 10. minutt»): web-gateways
       drengr-katalog på kode15.app leverer allerede dette — avklar om

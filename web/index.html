@@ -3,24 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KODE15</title>
+<title>KODE15 — en AI-first bedrift, bygget som kode</title>
+<meta name="description" content="KODE15 drifter hele sin infrastruktur med AI-agenter som gjør jobben og ett menneske som godkjenner den.">
 <link rel="icon" href="kode15-kvadrat.jpg">
 <link rel="stylesheet" href="kode15.css">
+<style>
+  .k-illustrasjon { text-align: center; margin: 28px 0; }
+  .k-illustrasjon img { max-width: 380px; width: 100%; border-radius: 14px;
+    border: 1px solid var(--k15-linje); }
+  .k-illustrasjon figcaption { font-size: 12px; color: var(--k15-noytralgraa);
+    margin-top: 8px; }
+  .k-flyt { color: var(--k15-tekst); border-left: 3px solid var(--k15-beige);
+    padding-left: 16px; margin: 16px 0; }
+</style>
 </head>
 <body class="k15-page">
 <header class="k15-header"><img class="k15-logo" src="kode15-logo.png" alt="KODE15"></header>
 <main style="max-width: 960px; margin: 0 auto; padding: 24px 16px;">
-  <p class="k15-kicker">Startside · tilhører drengr <strong>KODE15AS</strong></p>
-  <h1>En AI-first bedrift</h1>
+  <p class="k15-kicker">AI-first · startside</p>
+  <h1>En AI-first bedrift, bygget som kode</h1>
+  <p>Dette er historien om hvordan et lite norsk selskap drifter hele sin
+  infrastruktur — brannmur, DNS, nettsider, tilgangskontroll — med
+  AI-agenter som gjør jobben og ett menneske som godkjenner den.</p>
+
+  <p>Vi kaller hver tjeneste en <strong>drengr</strong> — norrønt for den
+  unge krigeren med stø, pålitelig tapperhet. Hos oss er en drengr tre ting
+  som alltid hører sammen: ett repo, én container og én AI-agent som bygger,
+  drifter og dokumenterer tjenesten.</p>
+
+  <figure class="k-illustrasjon">
+    <img src="drengr.jpg" alt="DRENGR — den unge krigeren med stø, pålitelig tapperhet">
+    <figcaption>DRENGR — norrønt: en hederlig mann; stø, pålitelig tapperhet.</figcaption>
+  </figure>
+
   <div class="k15-card">
-    <span class="k15-nummer">01</span>
-    <h3>Under utforming</h3>
-    <p>Her kommer KODE15s startside: fortellingen om en bedrift der hver
-    tjeneste er en drengr — ett repo, én container, én agent — og mennesket
-    alltid godkjenner. Inntil videre bor fortellingen på
-    <a href="https://github.com/KODE15AS">github.com/KODE15AS</a>, og
-    oversikten over drengene i drift på
-    <a href="https://kode15.app">kode15.app</a>.</p>
+    <span class="k15-nummer">Mennesket har siste ordet — alltid</span>
+    <h3>Forslag → leselig diff → et menneske trykker Ja</h3>
+    <p class="k-flyt">Agenten forfatter et forslag og committer det i git.
+    Endringen vises som leselig diff i drengens eget web-UI. Et menneske
+    godkjenner — bundet til git-commiten — og først da utføres endringen,
+    med backup tatt først og resultatet ført tilbake i historikken.</p>
+    <p>Brannmurregler, DNS-poster, tilgangslister — alt går gjennom denne
+    flyten. Git-historikken <em>er</em> revisjonsloggen.</p>
+  </div>
+
+  <h2 style="margin-top: 36px;">Se det live</h2>
+  <div class="k15-ruter">
+    <a class="k15-rute" href="https://kode15.app">
+      <span class="k15-nummer">01</span>
+      <h3>Driftsstatus</h3>
+      <p>Hver drengr i drift, med status og sertifikater — generert
+      automatisk hvert 10. minutt.</p>
+    </a>
+    <a class="k15-rute" href="https://fortigate.kode15.app">
+      <span class="k15-nummer">02</span>
+      <h3>Brannmuren i lesemodus</h3>
+      <p>Åpne forslag, godkjenningshistorikk og tilgangsregister —
+      offentlig lesbart.</p>
+    </a>
+    <a class="k15-rute" href="https://github.com/KODE15AS">
+      <span class="k15-nummer">03</span>
+      <h3>Koden</h3>
+      <p>Alle drengene ligger åpent på GitHub — fortellingen starter i
+      profil-repoet.</p>
+    </a>
   </div>
 </main>
 <footer class="k15-footer">KODE 15 · Sagveien 15B · 1890 Rakkestad</footer>
