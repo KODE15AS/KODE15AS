@@ -34,8 +34,10 @@ ble kjørt, hva var backupen.
 
 Dette er ikke et konsept — det er produksjonen vår:
 
-- **[kode15.app](https://kode15.app)** — flåten vår, live: hver drengr med
-  status og sertifikater, generert automatisk hvert 10. minutt.
+- **[kode15.app](https://kode15.app)** — startsiden vår, servert av denne
+  drengen. Derfra: **[web-gateway.kode15.app](https://web-gateway.kode15.app)**
+  — flåten live, hver drengr med status og sertifikater, generert
+  automatisk hvert 10. minutt.
 - **[fortigate.kode15.app](https://fortigate.kode15.app)** — se
   brannmurforvaltningen vår i lesemodus: åpne forslag, godkjennings-
   historikk og tilgangsregisteret. Ja, brannmuren vår har en offentlig
