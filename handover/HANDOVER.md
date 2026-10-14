@@ -34,7 +34,7 @@ drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
       Jørn når designet er ferdig.
 - [ ] Startside-design: dagens side er en dummy i KODE15-profil —
       utforming gjøres sammen med Jørn.
-- [ ] Drengr-status på startsiden (README lover «hver drengr med status
+- [ ] Driftsstatus på startsiden (README lover «hver drengr med status
       og sertifikater, generert hvert 10. minutt»): web-gateways
       drengr-katalog på kode15.app leverer allerede dette — avklar om
       startsiden lenker, innlemmer eller overtar katalogen ved
