@@ -55,9 +55,9 @@ skjedd.
 
 ```mermaid
 graph BT
-    EIER["Eier — Jørn<br/>eier mandatene"]
-    SJEF["Sjef-aktører<br/>mandat: eget domene"]
     DRENGR["Utførende aktører<br/>mandat: egen fasit"]
+    SJEF["Sjef-aktører<br/>mandat: eget domene"]
+    EIER["Eier — Jørn<br/>eier mandatene"]
 
     DRENGR -. "beslutning utenfor mandat løftes" .-> SJEF
     SJEF -. "beslutning utenfor mandat løftes" .-> EIER
