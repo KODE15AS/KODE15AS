@@ -59,10 +59,10 @@ graph TD
     SJEF["Sjef-aktører<br/>mandat: eget domene"]
     DRENGR["Utførende aktører<br/>mandat: egen fasit"]
 
-    SJEF -. "beslutning utenfor mandat løftes" .-> EIER
-    DRENGR -. "beslutning utenfor mandat løftes" .-> SJEF
     EIER -- "gir mandat" --> SJEF
     SJEF -- "gir mandat" --> DRENGR
+    SJEF -. "beslutning utenfor mandat løftes" .-> EIER
+    DRENGR -. "beslutning utenfor mandat løftes" .-> SJEF
 ```
 
 Dette erstatter formuleringen «mennesket har siste ordet — alltid», som
