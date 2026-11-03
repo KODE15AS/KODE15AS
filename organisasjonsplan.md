@@ -33,12 +33,61 @@ sjef — ikke hugren alene. Sjefen endrer aldri de utførende drengenes
 fasit selv; behov meldes som pekere og ordrer i eier-repoene, og
 helhetsbildet er sjefens ansvar.
 
+**Aktør — fellesbegrepet.** Menneske eller agent, frontier model eller
+enkel modell: alle som kommuniserer, anbefaler eller beslutter er
+aktører, og journalføres likt. Hver aktør har et **mandat** — se
+«Aktører, mandater og beslutninger».
+
 Som Håvamål advarer: rå makt uten refleksjon gjør oss til verktøy for
 motstanderne våre. Sann systemstyrke ligger i skjæringspunktet mellom
-det utholdende sinnet og den kontrollerte containeren — og øverst i
-dette skjæringspunktet står alltid et menneske: ingen drengr endrer noe
-viktig uten at et menneske har trykket Ja, bundet til git-commiten
-(norm «bestilling»).
+det utholdende sinnet og den kontrollerte containeren — og alt som
+skjer der, finnes bare hvis det finnes en commit.
+
+## Aktører, mandater og beslutninger
+
+Alle er **aktører** — mennesker og agenter, frontier model og enkel
+modell. Hver aktør har et **mandat**: beslutningene den kan ta selv.
+Alt utenfor mandatet løftes til nærmeste aktør med større mandat.
+Mandater opptjenes: en ny aktør anbefaler først, får mandat når
+anbefalingene har vist seg riktige, og mandatet vokser med merittlisten.
+Eieren eier mandatene. Hvis det ikke finnes en commit, har det ikke
+skjedd.
+
+```mermaid
+graph TD
+    EIER["Eier — Jørn<br/>eier mandatene"]
+    SJEF["Sjef-aktører<br/>mandat: eget domene"]
+    DRENGR["Utførende aktører<br/>mandat: egen fasit"]
+
+    SJEF -. "beslutning utenfor mandat løftes" .-> EIER
+    DRENGR -. "beslutning utenfor mandat løftes" .-> SJEF
+    EIER -- "gir mandat" --> SJEF
+    SJEF -- "gir mandat" --> DRENGR
+```
+
+Dette erstatter formuleringen «mennesket har siste ordet — alltid», som
+hverken var sann (agenter committer allerede selvstendig på `main`,
+norm «tbd») eller ønsket. Prinsippet er ansvarsbasert, ikke
+artsbasert: myndighet kan delegeres og opptjenes, ansvaret kan ikke.
+Derfor eier eieren mandatene — og dermed det som alltid løftes dit:
+pengebruk over grense, juridiske forpliktelser, og endringer i normene
+og i mandatene selv. Toppnivå-hugren (KODE15AS) er eierens egen aktør og
+tegnes ikke som eget nivå; i Journalen er menneske og agent to aktører.
+
+Implementasjon (detaljer, ikke fortelling):
+
+- Et mandat er en committet fil per rolle: grenser + minimum
+  modellklasse. Journalen loggfører hvilken aktør og modell som tok hver
+  beslutning.
+- Opptjening måles i Journalen som samsvar mellom anbefaling og fasit.
+  Modellbytte under mandatets klasse suspenderer mandatet; en ny modell
+  valideres ved replay av journalførte beslutninger før den får mandat.
+- Forslagsstiller beslutter ikke selv over trivialbåndet — samme
+  habilitetsregel for mennesker og agenter.
+- Mandater utvides per beslutningstype etter reversibilitet; irreversible
+  eksterne beslutninger forblir hos eieren lengst.
+- Forutsetning: Journalen i drift. «Ordre» består som teknisk term i
+  repoene (`orders/`); utad heter det beslutning og mandat.
 
 ## Organisasjonskartet
 
@@ -67,9 +116,9 @@ graph TD
 ### Toppnivået
 
 Eieren — organisasjonens rotnivå, i GitHub definert som
-`KODE15AS/KODE15AS`. Her bor organisasjonens ansikt utad og det siste
-ordet innad: alle kritiske handlinger i hele organisasjonen ender i en
-godkjenning her, etter bestillingsmønsteret.
+`KODE15AS/KODE15AS`. Her bor organisasjonens ansikt utad,
+organisasjonsplanen og eierens egen aktør (toppnivå-hugr, planlagt).
+Eieren eier mandatene; beslutninger utenfor ethvert mandat løftes hit.
 
 ### Linjen: fire sjefer
 
@@ -141,3 +190,7 @@ organisasjonsledd, men grunnfjellet linjen og staben står på.
    hos Sikkerhet; innholdskontrakten hos Journalen som kunde.
    To-herrer-spenningen løses med pekere/ordrer i eier-repoet, etter
    samme mønster som norm «eksponering».
+4. **Aktør- og mandatmodellen** (låst samme dag, kveld): alle er aktører
+   og journalføres likt; hver aktør har et mandat som opptjenes; eieren
+   eier mandatene. «Mennesket har siste ordet — alltid» utgår som
+   prinsipp; commit-invarianten består.

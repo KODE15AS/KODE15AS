@@ -16,19 +16,24 @@ sammen:
 2. **Én container** — tjenesten slik den faktisk kjører, bygget fra repoet.
 3. **Én AI-agent** — som bygger, drifter, feilsøker og dokumenterer drengen.
 
-## Mennesket har siste ordet — alltid
+## Grunnsteinene
 
-Ingen drengr endrer noe viktig på egen hånd. Flyten er alltid den samme:
+Tre ting er alltid sanne hos oss:
 
-> Agenten forfatter et **forslag** og committer det i git →
-> endringen vises som leselig diff i drengens eget web-UI →
-> et **menneske trykker Ja** (godkjenningen bindes til git-commiten) →
-> først da utføres endringen — med backup tatt først, og resultatet
-> ført tilbake i historikken.
+1. **Hvis det ikke finnes en commit, har det ikke skjedd.** Git-historikken
+   *er* revisjonsloggen: hvem foreslo, hvem besluttet, hva ble kjørt.
+2. **Alle er aktører — og likestilte.** Kommunikasjon med mennesker, mellom
+   mennesker, med agenter og mellom agenter journalføres likt.
+3. **Mandater opptjenes.** Agenter finnes i hele spekteret fra enkle lokale
+   modeller til frontier models — og som i enhver organisasjon får nye og
+   enklere aktører enkle oppgaver, mens myndigheten vokser med dokumentert
+   kompetanse. Hver aktør har et mandat: beslutningene den kan ta selv.
+   Alt utenfor mandatet løftes til en aktør med større mandat. Eieren eier
+   mandatene.
 
-Brannmurregler, DNS-poster, tilgangslister — alt går gjennom denne flyten.
-Git-historikken *er* revisjonsloggen: hvem foreslo, hvem godkjente, hva
-ble kjørt, hva var backupen.
+Brannmurregler, DNS-poster, betalinger — hver beslutning forfattes som et
+committet forslag, besluttes av en aktør med mandat til det, og effektueres
+av et skript utenfor containeren, aldri av et UI selv.
 
 ## Organisasjonen
 

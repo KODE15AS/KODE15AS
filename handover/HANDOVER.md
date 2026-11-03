@@ -8,9 +8,12 @@ starter med «les handover».
 ## Hva denne drengen er
 
 `KODE15AS/KODE15AS` er GitHubs profil-repo for kontoen (README-en vises på
-https://github.com/KODE15AS) **og** drengen for KODE15s offentlige
-startside: fortellingen om en AI-first bedrift der hver tjeneste er en
-drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
+https://github.com/KODE15AS), drengen for KODE15s offentlige startside,
+**og organisasjonens toppnivå** (norm «organisasjon», fra 2026-11-03):
+her bor `organisasjonsplan.md` og eierens egen aktør (toppnivå-hugr,
+planlagt). Fortellingen: en AI-first bedrift der hver tjeneste er en
+drengr (ett repo, én container, én agent), alle er aktører med
+opptjente mandater, og ingenting har skjedd uten en commit.
 
 - `README.md` — profilsiden på GitHub (ferdig førsteutgave, 2026-10-12).
 - `drengr.jpg` — DRENGR-illustrasjonen.
@@ -50,6 +53,14 @@ drengr (ett repo, én container, én agent) og mennesket alltid godkjenner.
       2026-10-14 (andre drengers leveranse).
 
 ## Kjente forhold
+
+- **Låst 2026-11-03 (kveld):** aktør- og mandatmodellen
+  (`organisasjonsplan.md`, «Aktører, mandater og beslutninger»).
+  «Mennesket har siste ordet — alltid» er fjernet fra README og
+  startside — det var forfattet av agent, ikke eier, og var hverken sant
+  eller ønsket. Idégrunnlaget er nå de tre grunnsteinene: commit,
+  likestilte aktører, opptjente mandater. Normene «organisasjon» og
+  «bestilling» i raven-platform oppdatert i samme beslutning.
 
 - **Designbeslutning 2026-10-14 (Jørn), etter kritisk gjennomgang av
   designdokumentet «2026 10 14 Web design start for startsiden»:**
