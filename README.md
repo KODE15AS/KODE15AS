@@ -30,6 +30,38 @@ Brannmurregler, DNS-poster, tilgangslister — alt går gjennom denne flyten.
 Git-historikken *er* revisjonsloggen: hvem foreslo, hvem godkjente, hva
 ble kjørt, hva var backupen.
 
+## Organisasjonen
+
+Også organisasjonen vår er bygget på drengr-begrepet, med to nivåer til:
+en **hugr** (norrønt: sinnet) er en drengrs autonome agenthjerne, og en
+**sjef** er en drengr med hugr *og* linjeansvar — det er kombinasjonen
+som gjør sjefen, ikke hugren alene. Journalen — plattformens hukommelse —
+er stabsinstitusjon direkte under eieren: den betjener hele huset og
+kommanderer ingen. Hele planen med begrunnelser:
+[`organisasjonsplan.md`](organisasjonsplan.md).
+
+```mermaid
+graph TD
+    TOP["Toppnivå — eier (Jørn)<br/>KODE15AS/KODE15AS"]
+
+    TOP --- JOURNAL["Journalen (stab)<br/>plattformens hukommelse"]
+
+    TOP --> SIK["Sikkerhetssjef<br/>(sjef, etablert)"]
+    TOP --> REG["Regnskapssjef<br/>(sjef, etablert)"]
+    TOP --> PROD["Produktsjef<br/>(sjef, planlagt)"]
+    TOP --> SALG["Salgssjef<br/>(sjef, planlagt)"]
+
+    SIK --> FG["fortigate<br/>brannmur"]
+    SIK --> DNS["deploi-dns<br/>DNS"]
+    SIK --> WG["web-gateway<br/>ruting/TLS"]
+    SIK --> WIFI["wifiomada<br/>wifi-radiolag"]
+    SIK --> EPOST["epost<br/>posttransport"]
+
+    JOURNAL -.leverandører.- PG["postgres"]
+    JOURNAL -.leverandører.- MINIO["MinIO"]
+    JOURNAL -.innholdskontrakt.- EPOST
+```
+
 ## Se det live
 
 Dette er ikke et konsept — det er produksjonen vår:
