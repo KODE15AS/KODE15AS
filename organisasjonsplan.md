@@ -54,15 +54,15 @@ Eieren eier mandatene. Hvis det ikke finnes en commit, har det ikke
 skjedd.
 
 ```mermaid
-graph TD
+graph BT
     EIER["Eier — Jørn<br/>eier mandatene"]
     SJEF["Sjef-aktører<br/>mandat: eget domene"]
     DRENGR["Utførende aktører<br/>mandat: egen fasit"]
 
+    DRENGR -. "beslutning utenfor mandat løftes" .-> SJEF
+    SJEF -. "beslutning utenfor mandat løftes" .-> EIER
     EIER -- "gir mandat" --> SJEF
     SJEF -- "gir mandat" --> DRENGR
-    SJEF -. "beslutning utenfor mandat løftes" .-> EIER
-    DRENGR -. "beslutning utenfor mandat løftes" .-> SJEF
 ```
 
 Dette erstatter formuleringen «mennesket har siste ordet — alltid», som
