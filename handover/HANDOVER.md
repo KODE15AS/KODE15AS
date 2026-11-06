@@ -52,9 +52,9 @@ opptjente mandater, og ingenting har skjedd uten en commit.
       og web-gateway er i drift, lenken er live — avhengigheten innfridd
       2026-10-14 (andre drengers leveranse).
 - [x] DRENGR-menyen utvidet med kodelader 2026-11-06 (Jørns bestilling i
-      kodelader-chatten): lenke til brukersiden på Funnel-URL-en.
-      NB: byttes til https://kodelader.kode15.app når kodelader-drengen
-      flytter brukersiden bak web-gateway (planlagt peker).
+      kodelader-chatten). Samme dag, etter at web-gateway la kjeden:
+      lenken byttet fra Funnel-URL-en til https://kodelader.kode15.app
+      (kodelader-drengens cutover).
 
 ## Kjente forhold
 
