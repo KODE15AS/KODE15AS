@@ -51,6 +51,10 @@ opptjente mandater, og ingenting har skjedd uten en commit.
 - [x] Lesemodus-lenken fortigate.kode15.app (README): fortigate-drengen
       og web-gateway er i drift, lenken er live — avhengigheten innfridd
       2026-10-14 (andre drengers leveranse).
+- [x] DRENGR-menyen utvidet med kodelader 2026-11-06 (Jørns bestilling i
+      kodelader-chatten): lenke til brukersiden på Funnel-URL-en.
+      NB: byttes til https://kodelader.kode15.app når kodelader-drengen
+      flytter brukersiden bak web-gateway (planlagt peker).
 
 ## Kjente forhold
 
